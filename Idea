@@ -1,0 +1,11 @@
+Ok, so i have been thinking and I have come up with an idea...
+If I use an if loop, it will be way easier! This means that I will have to make something like this:
+
+for i in range(1, 13):
+(indent)posx=0, posy=0
+(create button with posx, posy etc...)
+posx=posx+10
+posy=posy+10
+
+
+That code MAY work, I will ahve to test it out...

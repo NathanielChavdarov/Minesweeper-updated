@@ -1,0 +1,2 @@
+I have had an idea. In the proper minesweeper game, the position of the mines is always random. So I wonder if I would be able to use
+the random library from python to specify first, how many mines there would be, and second, their positions. I am gonna test out and put some working code on the branch.

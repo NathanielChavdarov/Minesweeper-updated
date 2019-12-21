@@ -1,18 +1,15 @@
-import tkinter
+from tkinter import *
+import random
+import numpy as np
 
+GRIDWIDTH = 4
+GRIDHEIGHT = 4
 
-def main():
-     window = tkinter.Tk()
-     window.title("A test run")
-     canvas = tkinter.Canvas(window, height=130, width=130)
-     canvas.pack(fill=tkinter.BOTH, expand=1)
+grid = np.array([
+    [
+    random.randint(0, 1) for x in range(GRIDWIDTH)
+    ]
+    for y in range(GRIDHEIGHT)
+    ])
 
-     for i in range(13):
-         canvas.create_line(0, i*10, 120, i*10, fill="red")
-         canvas.create_line(i*10, 0, i*10, 120, fill="red")
-
-     window.mainloop()
-
-
-if __name__ == "__main__":
-     main() 
+print(grid)

@@ -2,7 +2,7 @@ import tkinter
 import random
 import numpy as np
 
-GRIDWITH=4
+GRIDWIDTH=4
 GRIDHEIGHT=4
 
 root = tkinter.Tk()

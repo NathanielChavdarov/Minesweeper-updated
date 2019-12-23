@@ -1,27 +1,23 @@
-import tkinter
+from tkinter import Tk, Frame, Button, Canvas
 import random
 import numpy as np
 
 GRIDWIDTH=4
 GRIDHEIGHT=4
 
-root = tkinter.Tk()
-root.geometry('350x350')
+root = Tk()
 root.title("MineSweeper")
 
-f = Frame(root, bd=2, height=345, width=345, bg="white")
-f.pack()
-
-c = Canvas(root, width=300, height=300)
+c = Canvas(root, width=350, height=350, bg='white')
 c.pack()
 
-buttons = np.array([
-    [
-    Button(root, height=10, width=10, bg="green") for x in range(GRIDWIDTH)
-    ]
-    for y in range(GRIDHEIGHT)
-    ]
-    )
+f = Frame(root, height="350", width="350", bd=2)
+f.pack()
+
+for x in range(GRIDWIDTH):
+    for y in range(GRIDHEIGHT):
+        b = Button(c, height=5, width=5)
+        b.grid(row=x, column=y)
 
 grid = np.array([
     [
@@ -30,4 +26,4 @@ grid = np.array([
     for y in range(GRIDHEIGHT)
     ])
 
-print(grid)
+root.mainloop()
